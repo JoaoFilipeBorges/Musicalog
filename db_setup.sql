@@ -13,7 +13,7 @@ Create table Album
 	artistName nvarchar(256) not null,
 	[type] nvarchar(8) not null,
 	stock int not null,
-	cover nvarchar(max)--varbinary(max)
+	cover nvarchar(max)
 	CONSTRAINT [album_artist_type] UNIQUE NONCLUSTERED
 	(
 		title, artistName, type
