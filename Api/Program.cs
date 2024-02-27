@@ -13,12 +13,6 @@ builder.Services.AddSingleton<IAlbumRepository,AlbumRepository>();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 builder.Services.AddHandlers();
-//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAllAlbumsQueryHandler).Assembly));
-//builder.Services.AddMediatR(typeof(GetAllAlbumsQuery));
-//builder.Services.AddSingleton<IAlbumRepository>(cfg =>
-//{
-
-//});
 
 var app = builder.Build();
 
@@ -29,7 +23,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
